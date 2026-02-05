@@ -1,9 +1,6 @@
-from flask import Flask, render_template_string
+from flask import render_template_string
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
+def basic_page():
     return render_template_string("""
     <!DOCTYPE html>
     <html>
@@ -45,6 +42,3 @@ def hello():
     </body>
     </html>
     """)
-
-if __name__ == "__main__":
-    app.run(debug=True)
